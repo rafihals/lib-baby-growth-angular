@@ -1,0 +1,7 @@
+{
+    "/v1": {
+      "target": "",
+      "secure": false,
+      "changeOrigin": true
+    }
+}
