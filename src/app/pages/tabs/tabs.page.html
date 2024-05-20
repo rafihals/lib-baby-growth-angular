@@ -1,0 +1,48 @@
+<ion-tabs>
+  <div class="navigation">
+    <ul>
+      <li class="list" [class.active]="isActive(0)" (click)="activateLink(0)">
+        <a>
+          <span class="icon" (click)="documentForm()">
+            <ion-icon name="document-text-outline" (click)="documentForm()"></ion-icon>
+          </span>
+          <span class="circle"></span>
+        </a>
+      </li>
+      <li class="list" [class.active]="isActive(1)" (click)="activateLink(1)">
+        <a>
+          <span class="icon" (click)="onClickBaby()">
+            <ion-icon name="happy-outline" (click)="onClickBaby()"></ion-icon>
+          </span>
+          <span class="circle"></span>
+        </a>
+      </li>
+      <li class="list" [class.active]="isActive(2)" (click)="activateLink(2)">
+        <a>
+          <span class="icon" (click)="onClickHome()">
+            <ion-icon name="home-outline" (click)="onClickHome()"></ion-icon>
+          </span>
+          <span class="circle"></span>
+        </a>
+      </li>
+      <li class="list" [class.active]="isActive(3)" (click)="activateLink(3)">
+        <a>
+          <span class="icon" (click)="onClickPie()">
+            <ion-icon name="pie-chart-outline" (click)="onClickPie()"></ion-icon>
+          </span>
+          <span class="circle"></span>
+        </a>
+      </li>
+      <li class="list" [class.active]="isActive(4)" (click)="activateLink(4)">
+        <a>
+          <span class="icon" (click)="onClickSettings()">
+            <ion-icon (click)="onClickSettings()" name="settings-outline"></ion-icon>
+          </span>
+          <span class="circle"></span>
+        </a>
+      </li>
+      <div class="indicator"></div>
+    </ul>
+  </div>
+  <router-outlet></router-outlet>
+</ion-tabs>
