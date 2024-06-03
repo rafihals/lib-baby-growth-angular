@@ -86,9 +86,10 @@
   </ion-header>
   
   <ion-content [class.blurred]="isLoading">
-    <canvas id="pieChart"></canvas>
-    <canvas id="barChart"></canvas>
-    <canvas id="pieChart"></canvas>
-    <!-- <canvas id="barChart"></canvas> -->
+    <div class="container">
+      <canvas id="pieChart"></canvas>
+      <canvas id="barChart"></canvas>
+      <canvas style="visibility: hidden;" id="barChart"></canvas>
+    </div>
   </ion-content>
 </body>
