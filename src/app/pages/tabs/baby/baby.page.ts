@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BabyPage implements OnInit {
 
+  isLoading: boolean = true;
+
   constructor() { }
 
   ngOnInit() {
+    this.initializeLoader()
+  }
+
+  initializeLoader() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 2000);
   }
 
 }

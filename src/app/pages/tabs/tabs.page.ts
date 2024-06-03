@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 import { IonTabs } from '@ionic/angular';
 
 @Component({
@@ -7,18 +7,25 @@ import { IonTabs } from '@ionic/angular';
   templateUrl: './tabs.page.html',
   styleUrls: ['./tabs.page.scss'],
 })
-export class TabsPage implements OnInit {
+export class TabsPage implements OnInit, AfterViewInit {
 
   @ViewChild('tabs', { static: false }) tabs: IonTabs;
-
   selectedTab: any;
 
-  constructor(
-    private routerSvc: Router
-  ) { }
+  constructor(private routerSvc: Router) { }
 
-  ngOnInit(): void {
-    this.activateLink(2);
+  ngOnInit(): void { }
+
+  ngAfterViewInit(): void {
+    // Listen for router events to update the active link
+    this.routerSvc.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.updateActiveLink(event.urlAfterRedirects);
+      }
+    });
+
+    // Set the initial active link based on the current URL
+    this.updateActiveLink(this.routerSvc.url);
   }
 
   setCurrentTab() {
@@ -45,22 +52,36 @@ export class TabsPage implements OnInit {
   }
 
   documentForm() {
-    this.routerSvc.navigate(['/tabs/form'])
+    this.routerSvc.navigate(['/tabs/form']);
   }
 
   onClickBaby() {
-    this.routerSvc.navigate(['tabs/baby'])
+    this.routerSvc.navigate(['/tabs/baby']);
   }
 
   onClickHome() {
-    this.routerSvc.navigate(['tabs/home'])
+    this.routerSvc.navigate(['/tabs/home']);
   }
 
   onClickPie() {
-    this.routerSvc.navigate(['tabs/pie'])
+    this.routerSvc.navigate(['/tabs/pie']);
   }
 
   onClickSettings() {
-    this.routerSvc.navigate(['/tabs/settings'])
+    this.routerSvc.navigate(['/tabs/settings']);
+  }
+
+  private updateActiveLink(url: string) {
+    if (url.includes('/tabs/form')) {
+      this.activateLink(0);
+    } else if (url.includes('/tabs/baby')) {
+      this.activateLink(1);
+    } else if (url.includes('/tabs/home')) {
+      this.activateLink(2);
+    } else if (url.includes('/tabs/pie')) {
+      this.activateLink(3);
+    } else if (url.includes('/tabs/settings')) {
+      this.activateLink(4);
+    }
   }
 }
