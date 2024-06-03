@@ -55,24 +55,13 @@ ion-tabs {
     line-height: 75px;
     font-size: 1.5em;
     text-align: center;
-    color: #FF7D6B;
+    color: #a58c0e;
     transition: .3s;
 }
 
 .navigation ul li.active a .icon {
     transform: translateY(-32px);
 }
-
-// .navigation ul li a .text {
-//     position: absolute;
-//     color: orange;
-//     font-weight: 400;
-//     font-size: .75em;
-//     letter-spacing: .05em;
-//     opacity: 0;
-//     transform: translateY(20px);
-//     transition: .3s;
-// }
 
 .navigation ul li.active a .text {
     opacity: 1;
@@ -100,7 +89,7 @@ ion-tabs {
     top: -50%;
     width: 80px;
     height: 80px;
-    background: #FF7D6B;
+    background: #0f2d79;
     border: 11px solid #FFFFFF;
     border-radius: 50%;
     display: flex;
@@ -131,7 +120,7 @@ ion-tabs {
 
 .navigation ul li a .icon:hover,
 .navigation ul li a .icon.hover-active {
-    color: #f0f0f0;
+    color: #f7d217;
 }
 
 @media (min-width:768px) {
