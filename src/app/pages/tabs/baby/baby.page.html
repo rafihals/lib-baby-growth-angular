@@ -1,12 +1,6 @@
 <body>
   <div class="loader" *ngIf="isLoading">
-    <svg
-      class="pl"
-      viewBox="0 0 64 64"
-      width="64px"
-      height="64px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg class="pl" viewBox="0 0 64 64" width="64px" height="64px" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stop-color="#000" />
@@ -16,64 +10,18 @@
           <rect x="0" y="0" width="64" height="64" fill="url(#grad)" />
         </mask>
       </defs>
-      <circle
-        class="pl__ring"
-        cx="32"
-        cy="32"
-        r="26"
-        fill="none"
-        stroke="hsl(223,90%,55%)"
-        stroke-width="12"
-        stroke-dasharray="169.65 169.65"
-        stroke-dashoffset="-127.24"
-        stroke-linecap="round"
-        transform="rotate(135)"
-      />
+      <circle class="pl__ring" cx="32" cy="32" r="26" fill="none" stroke="hsl(223,90%,55%)" stroke-width="12"
+        stroke-dasharray="169.65 169.65" stroke-dashoffset="-127.24" stroke-linecap="round" transform="rotate(135)" />
       <g fill="hsl(223,90%,55%)">
-        <circle
-          class="pl__ball1"
-          cx="32"
-          cy="45"
-          r="6"
-          transform="rotate(14)"
-        />
-        <circle
-          class="pl__ball2"
-          cx="32"
-          cy="48"
-          r="3"
-          transform="rotate(-21)"
-        />
+        <circle class="pl__ball1" cx="32" cy="45" r="6" transform="rotate(14)" />
+        <circle class="pl__ball2" cx="32" cy="48" r="3" transform="rotate(-21)" />
       </g>
       <g mask="url(#grad-mask)">
-        <circle
-          class="pl__ring"
-          cx="32"
-          cy="32"
-          r="26"
-          fill="none"
-          stroke="hsl(283,90%,55%)"
-          stroke-width="12"
-          stroke-dasharray="169.65 169.65"
-          stroke-dashoffset="-127.24"
-          stroke-linecap="round"
-          transform="rotate(135)"
-        />
+        <circle class="pl__ring" cx="32" cy="32" r="26" fill="none" stroke="hsl(283,90%,55%)" stroke-width="12"
+          stroke-dasharray="169.65 169.65" stroke-dashoffset="-127.24" stroke-linecap="round" transform="rotate(135)" />
         <g fill="hsl(283,90%,55%)">
-          <circle
-            class="pl__ball1"
-            cx="32"
-            cy="45"
-            r="6"
-            transform="rotate(14)"
-          />
-          <circle
-            class="pl__ball2"
-            cx="32"
-            cy="48"
-            r="3"
-            transform="rotate(-21)"
-          />
+          <circle class="pl__ball1" cx="32" cy="45" r="6" transform="rotate(14)" />
+          <circle class="pl__ball2" cx="32" cy="48" r="3" transform="rotate(-21)" />
         </g>
       </g>
     </svg>
@@ -84,8 +32,153 @@
       <ion-title>baby</ion-title>
     </ion-toolbar>
   </ion-header>
-  
+
   <ion-content [class.blurred]="isLoading">
-  
+    <section class="projects section" id="projects">
+      <div class="projects__container container grid">
+        <article class="projects__card">
+          <div class="projects__image">
+            <img
+              src="https://images.unsplash.com/photo-1592417817038-d13fd7342605?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTI3NjU5NTV8&ixlib=rb-4.0.3&q=85"
+              alt="image" class="projects__img" />
+          </div>
+
+          <div class="projects__content">
+            <h3 class="projects__subtitle">Website</h3>
+            <h2 class="projects__title">Restaurant Website</h2>
+
+            <p class="projects__description">
+              Project that you carry out in the design and structure of the
+              layout, showing the design at the client's request.
+            </p>
+          </div>
+
+          <div class="projects__buttons">
+            <a href="https://github.com/" target="_blank" class="projects__link">
+              <i class="ri-chrome-line"></i> Source
+            </a>
+
+            <a href="https://dribbble.com/" target="_blank" class="projects__link">
+              <i class="ri-dribbble-line"></i> View
+            </a>
+          </div>
+        </article>
+
+        <article class="projects__card">
+          <div class="projects__image">
+            <img
+              src="https://images.unsplash.com/photo-1491172700640-4f1a131a3670?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTI3NjY2ODV8&ixlib=rb-4.0.3&q=85"
+              alt="image" class="projects__img" />
+          </div>
+
+          <div class="projects__content">
+            <h3 class="projects__subtitle">App</h3>
+            <h2 class="projects__title">Yoga App</h2>
+
+            <p class="projects__description">
+              Project that you carry out in the design and structure of the
+              layout, showing the design at the client's request.
+            </p>
+          </div>
+
+          <div class="projects__buttons">
+            <a href="https://github.com/" target="_blank" class="projects__link">
+              <i class="ri-chrome-line"></i> Source
+            </a>
+
+            <a href="https://dribbble.com/" target="_blank" class="projects__link">
+              <i class="ri-dribbble-line"></i> View
+            </a>
+          </div>
+        </article>
+
+        <article class="projects__card">
+          <div class="projects__image">
+            <img
+              src="https://images.unsplash.com/photo-1622431062669-ed38267b6de5?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTI3NjYzNDJ8&ixlib=rb-4.0.3&q=85"
+              alt="image" class="projects__img" />
+          </div>
+
+          <div class="projects__content">
+            <h3 class="projects__subtitle">App</h3>
+            <h2 class="projects__title">Fast Food App</h2>
+
+            <p class="projects__description">
+              Project that you carry out in the design and structure of the
+              layout, showing the design at the client's request.
+            </p>
+          </div>
+
+          <div class="projects__buttons">
+            <a href="https://github.com/" target="_blank" class="projects__link">
+              <i class="ri-chrome-line"></i> Source
+
+            </a>
+
+            <a href="https://dribbble.com/" target="_blank" class="projects__link">
+              <i class="ri-dribbble-line"></i> View
+            </a>
+          </div>
+        </article>
+
+        <article class="projects__card">
+          <div class="projects__image">
+            <img
+              src="https://images.unsplash.com/photo-1515560570411-00a0026e6086?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTI3NjY2MDJ8&ixlib=rb-4.0.3&q=85"
+              alt="image" class="projects__img" />
+          </div>
+
+          <div class="projects__content">
+            <h3 class="projects__subtitle">Website</h3>
+            <h2 class="projects__title">Coffee Delivery Website</h2>
+
+            <p class="projects__description">
+              Project that you carry out in the design and structure of the
+              layout, showing the design at the client's request.
+            </p>
+          </div>
+
+          <div class="projects__buttons">
+            <a href="https://github.com/" target="_blank" class="projects__link">
+              <i class="ri-chrome-line"></i> Source
+
+            </a>
+
+            <a href="https://dribbble.com/" target="_blank" class="projects__link">
+              <i class="ri-dribbble-line"></i> View
+            </a>
+          </div>
+        </article>
+
+        <article class="projects__card">
+          <div class="projects__image">
+            <img
+              src="https://images.unsplash.com/photo-1672257493461-704902362c1d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTI3NjY0OTV8&ixlib=rb-4.0.3&q=85"
+              alt="image" class="projects__img" />
+          </div>
+
+          <div class="projects__content">
+            <h3 class="projects__subtitle">Website</h3>
+            <h2 class="projects__title">Barbershop Website</h2>
+
+            <p class="projects__description">
+              Project that you carry out in the design and structure of the
+              layout, showing the design at the client's request.
+            </p>
+          </div>
+
+          <div class="projects__buttons">
+            <a href="https://github.com/" target="_blank" class="projects__link">
+              <i class="ri-chrome-line"></i> Source
+
+            </a>
+
+            <a href="https://dribbble.com/" target="_blank" class="projects__link">
+              <i class="ri-dribbble-line"></i> View
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
   </ion-content>
 </body>

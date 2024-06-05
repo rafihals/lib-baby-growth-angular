@@ -149,3 +149,44 @@ ion-title {
         transform: rotate(339deg);
     }
 }
+
+section {
+    margin-bottom: 20px;
+  }
+  
+  h1, h2 {
+    color: #f8b400;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  form {
+    margin-top: 10px;
+  }
+  
+  form ion-item {
+    margin-bottom: 10px;
+  }
+  
+  ion-card {
+    margin-bottom: 20px;
+  }
+  
+  ion-footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  ion-footer p {
+    margin: 5px 0;
+  }
+  

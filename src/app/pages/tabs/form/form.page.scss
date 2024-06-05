@@ -15,6 +15,13 @@ ion-title {
     --color: #ffffff;
 }
 
+ion-item {
+    --highlight-height: 2px;
+    --highlight-color-focused: #43e7f3;
+    --highlight-color-valid: #6f58d8;
+    --highlight-color-invalid: #ff46be;
+  }
+
 .loader {
     position: absolute;
     top: 0;
@@ -26,6 +33,10 @@ ion-title {
     align-items: center;
     z-index: 10;
     backdrop-filter: blur(1px);
+}
+
+.wrap{
+    padding: 10px 10px 10px 10px;
 }
 
 .content.blurred {

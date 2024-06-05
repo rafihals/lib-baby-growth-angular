@@ -30,3 +30,7 @@
 @import 'swiper/scss';
 @import 'swiper/scss/keyboard';
 @import 'swiper/scss/pagination';
+
+html {
+    scroll-behavior: smooth;
+}

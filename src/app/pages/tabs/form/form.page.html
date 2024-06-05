@@ -86,26 +86,25 @@
   </ion-header>
   
   <ion-content [class.blurred]="isLoading">
-    <div class="wrap" style="padding: 10px 10px 10px 10px">
-      <ion-item>
-        <ion-label position="floating">Umur Bayi (bulan)</ion-label>
-        <ion-input type="number" required></ion-input>
+    <div class="wrap">
+      <!-- <ion-item>
+        <ion-label position="floating">Default input</ion-label>
+        <ion-input placeholder="Enter text"></ion-input>
       </ion-item>
-  
-      <ion-item>
-        <ion-label position="floating">Gender Bayi</ion-label>
-        <ion-select placeholder="Pilih gender" required>
-          <ion-select-option value="laki-laki">Laki-laki</ion-select-option>
-          <ion-select-option value="perempuan">Perempuan</ion-select-option>
-        </ion-select>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label position="floating">Berat Badan Bayi (kg)</ion-label>
-        <ion-input type="number" step="0.01" required></ion-input>
-      </ion-item>
-  
-      <ion-button expand="full" type="submit" class="ion-margin-top">Submit</ion-button>
+      
+      <ion-item fill="solid">
+        <ion-label position="floating">Solid input</ion-label>
+        <ion-input placeholder="Enter text"></ion-input>
+      </ion-item> -->
+      
+          <ion-item fill="outline">
+            <ion-label position="floating">Outline input</ion-label>
+            <ion-input placeholder="Enter text"></ion-input>
+          </ion-item>
+          <ion-item style="margin-top: 1rem;">
+            <ion-label position="floating">Floating Input</ion-label>
+            <ion-input placeholder="Enter text"></ion-input>
+          </ion-item>
     </div>
   </ion-content>
 </body>
