@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CheckboxCustomEvent } from '@ionic/angular';
 
 @Component({
   selector: 'app-settings',
@@ -7,18 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsPage implements OnInit {
 
-  isLoading: boolean = true;
+  canDismiss = false;
 
-  constructor() { }
+  presentingElement = null;
 
   ngOnInit() {
-    this.initializeLoader()
+    this.presentingElement = document.querySelector('.ion-page');
   }
 
-  initializeLoader() {
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 2000);
+  onTermsChanged(event: Event) {
+    const ev = event as CheckboxCustomEvent;
+    this.canDismiss = ev.detail.checked;
   }
-
 }

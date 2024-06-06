@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/service/api.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -17,7 +16,7 @@ export class HomePage implements OnInit {
 
   initializeLoader() {
     setTimeout(() => {
-      this.isLoading = false;
+      this.isLoading = false; 
     }, 2000);
   }
 

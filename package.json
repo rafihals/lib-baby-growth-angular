@@ -26,6 +26,7 @@
     "@capacitor/status-bar": "4.0.1",
     "@ionic/angular": "^6.1.9",
     "chart.js": "^4.4.3",
+    "gsap": "^3.12.5",
     "ionicons": "^6.0.3",
     "rxjs": "~6.6.0",
     "swiper": "^8.4.4",

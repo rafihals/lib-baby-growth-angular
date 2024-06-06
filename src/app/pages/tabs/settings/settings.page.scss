@@ -1,217 +1,73 @@
-ion-content {
-    --background: #ffffff;
-    --color: #333333;
-    --padding: 20px;
+a:hover {
+    text-decoration: none !important;
 }
 
-ion-toolbar {
-    --background: #0f2d79;
-    --color: #ffffff;
-}
-
-ion-title {
-    --color: #ffffff;
-}
-.loader {
-    position: absolute;
-    top: 0;
-    left: 0;
+.dedcription-btn {
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    backdrop-filter: blur(1px);
+    position: relative;
+    display: inline-block;
+    border-radius: 30px;
+    background-color: #fcfcfc;
+    color: #ffa000;
+    text-align: center;
+    font-size: 18px;
+    padding: 9px 0;
+    transition: all 0.3s;
+    padding-right: 40px;
+    margin: 20px 5px;
+    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.06);
 }
 
-.content.blurred {
-    filter: blur(5px);
+.dedcription-btn .btn-icon {
+    background-color: #ffa000;
+    width: 92px;
+    height: 45px;
+    float: right;
+    position: absolute;
+    border-radius: 30px 30px 30px 0;
+    ;
+    right: 0px;
+    top: 0px;
+    transition: all 0.3s;
 }
 
-.pl {
-    display: block;
-    width: 4em;
-    height: 4em;
+.name-descripeion {
+    position: relative;
+    z-index: 9999;
 }
 
-.pl__ring,
-.pl__ball1,
-.pl__ball2 {
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    transform-origin: 32px 32px;
-}
-
-.pl__ring {
-    animation-name: ring;
-}
-
-.pl__ball1 {
-    animation-name: ball1;
-}
-
-.pl__ball2 {
-    animation-name: ball2;
-}
-
-/* Dark theme  */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: hsl(var(--hue), 10%, 10%);
-        --fg: hsl(var(--hue), 10%, 90%);
-    }
-}
-
-/* Animation */
-@keyframes ring {
-    from {
-        animation-timing-function: ease-in-out;
-        stroke-dashoffset: -122.52;
-        transform: rotate(135deg);
-    }
-
-    15% {
-        animation-timing-function: ease-in;
-        stroke-dashoffset: -122.52;
-        transform: rotate(90deg);
-    }
-
-    35% {
-        animation-timing-function: ease-out;
-        stroke-dashoffset: -65.34;
-        transform: rotate(297.5deg);
-    }
-
-    55% {
-        animation-timing-function: ease-in-out;
-        stroke-dashoffset: -122.52;
-        transform: rotate(505deg);
-    }
-
-    70% {
-        animation-timing-function: ease-in-out;
-        stroke-dashoffset: -122.52;
-        transform: rotate(490deg);
-    }
-
-    85%,
-    to {
-        stroke-dashoffset: -122.52;
-        transform: rotate(497.5deg);
-    }
-}
-
-@keyframes ball1 {
-    from {
-        transform: rotate(14deg);
-    }
-
-    20% {
-        transform: rotate(-7deg);
-    }
-
-    60% {
-        transform: rotate(399deg);
-    }
-
-    75% {
-        transform: rotate(361deg);
-    }
-
-    90%,
-    to {
-        transform: rotate(374deg);
-    }
-}
-
-@keyframes ball2 {
-    from {
-        transform: rotate(-21deg);
-    }
-
-    25% {
-        transform: rotate(-47deg);
-    }
-
-    60% {
-        transform: rotate(364deg);
-    }
-
-    75% {
-        transform: rotate(326deg);
-    }
-
-    90%,
-    to {
-        transform: rotate(339deg);
-    }
-}
-
-.wrap {
-    margin-top: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 0 0 15px 15px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 250px;
-    padding-bottom: 15px;
-    background-color: white;
-    justify-content: center;
-
-}
-
-.card img{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-image: linear-gradient(60deg, #2AAA8A, #4169E1);
-    padding: 5px;
-    margin-top: -45px;
-}
-
-.card h2{
-    margin: 10px 0;
-}
-
-.cont{
-    width: 90%;
+.btn-icon::after {
+    content: "";
+    width: 0;
     height: 0;
-    overflow: hidden;
-    text-align: center;
-    transition: all 0.6s ease;
+    border-top: 45px solid #fcfcfc;
+    border-right: 40px solid transparent;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
-.card .cont .link i{
-    font-size: 25px;
-    color: rgb(82, 82, 82);
-    transition: all 0.2s ease;
+.dedcription-btn:hover .btn-icon {
+    width: 100%;
+    border-radius: 30px;
 }
 
-.card .cont .link i:hover{
-    color: black;
-    cursor: pointer;
+.dedcription-btn:hover .btn-icon::after {
+    display: none;
+    opacity: 0.1;
 }
 
-.card:hover > .cont{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    height: 170px;
+.btn-icon i {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    color: #fff;
 }
 
-.card:hover > .link{
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
+.dedcription-btn:hover {
+    color: #fff !important;
+}
+
+.book {
+    background-color: #00b7c4 !important;
 }
