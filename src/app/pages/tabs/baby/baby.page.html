@@ -26,28 +26,173 @@
       </g>
     </svg>
   </div>
-  <!-- <ion-header>
-    <ion-toolbar>
-      <ion-title>baby</ion-title>
+  <ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar class="center-tool">
+      <ion-title>Bayi</ion-title>
     </ion-toolbar>
-  </ion-header> -->
-  <ion-content [class.blurred]="isLoading">
+  </ion-header>
+  <ion-content [fullscreen]="true" [class.blurred]="isLoading">
+    <div class="container">
+      <h1 class="title" style="--duration: 1s">
+        <span style="--delay: 0.1s"><strong class="you">Data pertumbuhan</strong></span>
+        <span style="--delay: 0.3s; font-family: 'Nunito'; font-weight: 700">
+          dan perkembangan bayi
+          <strong class="strong-star"> 0-36 bulan.</strong></span>
+      </h1>
+    </div>
     <section class="projects section" id="projects">
       <div class="projects__container container grid">
         <article class="projects__card">
           <div class="projects__image">
-            <img src="../../assets/images/6.jpeg" alt="image" class="projects__img" />
+            <img src="../../assets/images/bayi-3-bulan.jpeg" alt="image" class="projects__img" />
           </div>
           <div class="projects__content">
-            <h3 class="projects__subtitle">6</h3>
-            <h2 class="projects__title">Restaurant Website</h2>
+            <h3 class="projects__subtitle" style="color: black">
+              <strong style="color: #ff586b">Bayi</strong> umur 0 - 3 bulan
+            </h3>
+            <h2 class="projects__title">- Motorik halus</h2>
             <p class="projects__description">
-              Project that you carry out in the design and structure of the
-              layout, showing the design at the client's request.
+              Pada umur dibawah 4 bulan , bayi mampu menggerakkan kepala dari
+              satu sisi ke sisi lain
+            </p>
+            <h2 class="projects__title">- Motorik kasar</h2>
+            <p class="projects__description">
+              Bayi dapat bergerak tak terkendali saat terlentang, dengan lengan
+              dan tungkai yang aktif, serta dapat mengangkat kepalanya dengan
+              tegak saat berada dalam posisi telungkup.
             </p>
           </div>
+          <div class="projects__buttons">
+            <a href="https://github.com/" target="_blank" class="projects__link">
+              <ion-icon name="logo-chrome" class="icon-chrome"></ion-icon>
+              Source
+            </a>
+            <a href="https://youtube.com/" target="_blank" class="projects__link">
+              <ion-icon name="logo-youtube" class="icon-yt"></ion-icon> View
+            </a>
+          </div>
           <div class="col-sm-12 col-md-6">
-            <a class="dedcription-btn" id="open-modal">
+            <a class="dedcription-btn" id="open-modal-3">
+              <span class="name-descripeion">Details</span>
+              <div class="btn-icon heart">
+                <i class="fas fa-heartbeat"></i>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="projects__card">
+          <div class="projects__image">
+            <img src="../../assets/images/bayi-6-bulan.jpeg" alt="image" class="projects__img" />
+          </div>
+          <div class="projects__content">
+            <h3 class="projects__subtitle" style="color: black">
+              <strong style="color: rgb(15, 199, 5)">Bayi</strong> umur 4 - 6
+              bulan
+            </h3>
+            <h2 class="projects__title">- Motorik halus</h2>
+            <p class="projects__description">
+              Bayi mampu menggerakkan kepala sepenuhnya, menggenggam benda dalam
+              beberapa detik, mengarahkan matanya pada benda kecil, dan
+              menjangkau mainan yang berjarak dengannya.
+            </p>
+            <h2 class="projects__title">- Motorik kasar</h2>
+            <p class="projects__description">
+              Bayi mampu mempertahankan lehernya secara kuat, mengangkat dada
+              dan kedua lengan sebagai penyangga saat posisi telungkup,
+              mempertahankan posisi kepala tegak dan stabil, serta berbalik
+              paling sedikit dua kali dari terlentang ke telungkup dan
+              sebaliknya.
+            </p>
+          </div>
+          <div class="projects__buttons">
+            <a href="https://github.com/" target="_blank" class="projects__link">
+              <ion-icon name="logo-chrome" class="icon-chrome"></ion-icon>
+              Source
+            </a>
+            <a href="https://youtube.com/" target="_blank" class="projects__link">
+              <ion-icon name="logo-youtube" class="icon-yt"></ion-icon> View
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <a class="dedcription-btn" id="open-modal-6">
+              <span class="name-descripeion">Details</span>
+              <div class="btn-icon child">
+                <i class="fas fa-child"></i>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="projects__card">
+          <div class="projects__image">
+            <img src="../../assets/images/detail-bayi-9.jpeg" alt="image" style="height: 200px" class="projects__img" />
+          </div>
+          <div class="projects__content">
+            <h3 class="projects__subtitle" style="color: black">
+              <strong style="color: #dd09b6">Bayi</strong> umur 6 - 9 bulan
+            </h3>
+            <h2 class="projects__title">- Motorik halus</h2>
+            <p class="projects__description">
+              Bayi mampu memindahkan benda dari satu tangan ke tangan lainnya,
+              memungut dua benda sekaligus dengan masing-masing tangan memegang
+              satu benda, dan memungut benda sebesar kacang dengan cara meraup.
+            </p>
+            <h2 class="projects__title">- Motorik kasar</h2>
+            <p class="projects__description">
+              Bayi mampu duduk sendiri dengan kedua tangan menyangga tubuhnya,
+              belajar berdiri dengan kedua kakinya menyanggah sebagian berat
+              badan, serta merangkak untuk meraih mainan atau mendekati
+              seseorang.
+            </p>
+          </div>
+          <div class="projects__buttons">
+            <a href="https://github.com/" target="_blank" class="projects__link">
+              <ion-icon name="logo-chrome" class="icon-chrome"></ion-icon>
+              Source
+            </a>
+            <a href="https://youtube.com/" target="_blank" class="projects__link">
+              <ion-icon name="logo-youtube" class="icon-yt"></ion-icon> View
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <a class="dedcription-btn" id="open-modal-9">
+              <span class="name-descripeion">Details</span>
+              <div class="btn-icon smile">
+                <i class="fas fa-smile-wink"></i>
+              </div>
+            </a>
+          </div>
+        </article>
+        <article class="projects__card">
+          <div class="projects__image">
+            <img src="../../assets/images/12.jpeg" alt="image" class="projects__img" />
+          </div>
+          <div class="projects__content">
+            <h3 class="projects__subtitle" style="color: black">
+              <strong style="color: #00b7c4">Bayi</strong> umur 9 - 12 bulan
+            </h3>
+            <h2 class="projects__title">- Motorik halus</h2>
+            <p class="projects__description">
+              Bayi akan memasukkan benda yang disukai ke mulut serta bayi mampu
+              memegang benda kecil dengan erat
+            </p>
+            <h2 class="projects__title">- Motorik kasar</h2>
+            <p class="projects__description">
+              Bayi mampu mengangkat badannya pada posisi berdiri, belajar
+              berdiri sambil memegang benda di sekitarnya seperti meja atau
+              kursi, dan mampu berjalan dengan bantuan atau dituntun.
+            </p>
+          </div>
+          <div class="projects__buttons">
+            <a href="https://github.com/" target="_blank" class="projects__link">
+              <ion-icon name="logo-chrome" class="icon-chrome"></ion-icon>
+              Source
+            </a>
+            <a href="https://youtube.com/" target="_blank" class="projects__link">
+              <ion-icon name="logo-youtube" class="icon-yt"></ion-icon> View
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <a class="dedcription-btn" id="open-modal-12">
               <span class="name-descripeion">Details</span>
               <div class="btn-icon book">
                 <i class="fas fa-book-reader"></i>
@@ -55,136 +200,347 @@
             </a>
           </div>
         </article>
-       
         <article class="projects__card">
           <div class="projects__image">
-            <img src="../../assets/images/12.jpeg" alt="image" class="projects__img" />
+            <img src="../../assets/images/detail-bayi-18.jpeg" alt="image" class="projects__img" />
           </div>
           <div class="projects__content">
-            <h3 class="projects__subtitle">12</h3>
-            <h2 class="projects__title">Yoga App</h2>
+            <h3 class="projects__subtitle" style="color: black">
+              <strong style="color: #8bc34a">Bayi</strong> umur 12 - 18 bulan
+            </h3>
+            <h2 class="projects__title">- Motorik halus</h2>
             <p class="projects__description">
-              Project that you carry out in the design and structure of the
-              layout, showing the design at the client's request.
+              Bayi mampu menumpuk dua kubus atau dua benda menjadi satu
+            </p>
+            <h2 class="projects__title">- Motorik kasar</h2>
+            <p class="projects__description">
+              Bayi mampu berdiri sendiri tanpa berpegangan, berjalan mundur lima
+              langkah, serta membungkuk untuk memungut mainan kemudian berdiri
+              kembali.
             </p>
           </div>
           <div class="projects__buttons">
             <a href="https://github.com/" target="_blank" class="projects__link">
-              <i class="ri-chrome-line"></i> Source
+              <ion-icon name="logo-chrome" class="icon-chrome"></ion-icon>
+              Source
             </a>
-            <a href="https://dribbble.com/" target="_blank" class="projects__link">
-              <i class="ri-dribbble-line"></i> View
+            <a href="https://youtube.com/" target="_blank" class="projects__link">
+              <ion-icon name="logo-youtube" class="icon-yt"></ion-icon> View
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <a class="dedcription-btn" id="open-modal-18">
+              <span class="name-descripeion">Details</span>
+              <div class="btn-icon brain">
+                <i class="fas fa-brain"></i>
+              </div>
             </a>
           </div>
         </article>
         <article class="projects__card">
           <div class="projects__image">
-            <img src="../../assets/images/bayi-18.jpg" alt="image" class="projects__img" />
+            <img src="../../assets/images/36.jpeg"  alt="image" class="projects__img" />
           </div>
           <div class="projects__content">
-            <h3 class="projects__subtitle">18</h3>
-            <h2 class="projects__title">Fast Food App</h2>
+            <h3 class="projects__subtitle" style="color: black">
+              <strong style="color: #ffa000">Bayi</strong> umur 18 - 24 bulan
+            </h3>
+            <h2 class="projects__title">- Motorik halus</h2>
             <p class="projects__description">
-              Project that you carry out in the design and structure of the
-              layout, showing the design at the client's request.
+              mampu menumpuk empat buah kubus menjadi satu, memungut benda kecil menggunakan
+              ibu jari dan jari telunjuk, serta menggelindingkan bola ke arah
+              sasaran.
+            </p>
+            <h2 class="projects__title">- Motorik kasar</h2>
+            <p class="projects__description">
+              Bayi mampu menaiki tangga sendiri
+              serta bayi mampu bermain dan menendang bola kecil
             </p>
           </div>
           <div class="projects__buttons">
             <a href="https://github.com/" target="_blank" class="projects__link">
-              <i class="ri-chrome-line"></i> Source
+              <ion-icon name="logo-chrome" class="icon-chrome"></ion-icon>
+              Source
             </a>
-            <a href="https://dribbble.com/" target="_blank" class="projects__link">
-              <i class="ri-dribbble-line"></i> View
+            <a href="https://youtube.com/" target="_blank" class="projects__link">
+              <ion-icon name="logo-youtube" class="icon-yt"></ion-icon> View
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <a class="dedcription-btn" id="open-modal-24">
+              <span class="name-descripeion">Details</span>
+              <div class="btn-icon">
+                <i class="far fa-lightbulb"></i>
+              </div>
             </a>
           </div>
         </article>
         <article class="projects__card">
           <div class="projects__image">
-            <img src="../../assets/images/bayi-24.jpg" alt="image" class="projects__img" />
+            <img src="../../assets/images/bayi-24.jpg"  alt="image" class="projects__img" />
           </div>
           <div class="projects__content">
-            <h3 class="projects__subtitle">24</h3>
-            <h2 class="projects__title">Coffee Delivery Website</h2>
+            <h3 class="projects__subtitle" style="color: black">
+              <strong style="color: #ffa000">Bayi</strong> umur 24 - 36 bulan
+            </h3>
+            <h2 class="projects__title">- Motorik halus</h2>
             <p class="projects__description">
-              Project that you carry out in the design and structure of the
-              layout, showing the design at the client's request.
+              Bayi mampu mencoret-coret kertas dengan pensil
+            </p>
+            <h2 class="projects__title">- Motorik kasar</h2>
+            <p class="projects__description">
+              Bayi mampu berdiri sendiri tanpa berpegangan 30 detik
             </p>
           </div>
           <div class="projects__buttons">
             <a href="https://github.com/" target="_blank" class="projects__link">
-              <i class="ri-chrome-line"></i> Source
+              <ion-icon name="logo-chrome" class="icon-chrome"></ion-icon>
+              Source
             </a>
-            <a href="https://dribbble.com/" target="_blank" class="projects__link">
-              <i class="ri-dribbble-line"></i> View
+            <a href="https://youtube.com/" target="_blank" class="projects__link">
+              <ion-icon name="logo-youtube" class="icon-yt"></ion-icon> View
             </a>
           </div>
-        </article>
-        <article class="projects__card">
-          <div class="projects__image">
-            <img src="../../assets/images/30.jpeg" alt="image" class="projects__img" />
-          </div>
-          <div class="projects__content">
-            <h3 class="projects__subtitle">30</h3>
-            <h2 class="projects__title">Barbershop Website</h2>
-            <p class="projects__description">
-              Project that you carry out in the design and structure of the
-              layout, showing the design at the client's request.
-            </p>
-          </div>
-          <div class="projects__buttons">
-            <a href="https://github.com/" target="_blank" class="projects__link">
-              <i class="ri-chrome-line"></i> Source
-            </a>
-            <a href="https://dribbble.com/" target="_blank" class="projects__link">
-              <i class="ri-dribbble-line"></i> View
+          <div class="col-sm-12 col-md-6">
+            <a class="dedcription-btn" id="open-modal-36">
+              <span class="name-descripeion" >Details</span>
+              <div class="btn-icon">
+                <i class="far fa-lightbulb"></i>
+              </div>
             </a>
           </div>
         </article>
-        <article class="projects__card">
-          <div class="projects__image">
-            <img src="../../assets/images/36.jpeg" alt="image" class="projects__img" />
-          </div>
-          <div class="projects__content">
-            <h3 class="projects__subtitle">36</h3>
-            <h2 class="projects__title">Barbershop Website</h2>
-            <p class="projects__description">
-              Project that you carry out in the design and structure of the
-              layout, showing the design at the client's request.
-            </p>
-          </div>
-          <div class="projects__buttons">
-            <a href="https://github.com/" target="_blank" class="projects__link">
-              <i class="ri-chrome-line"></i> Source
-            </a>
-            <a href="https://dribbble.com/" target="_blank" class="projects__link">
-              <i class="ri-dribbble-line"></i> View
-            </a>
-          </div>
-        </article>
-        <div class="hide" style="visibility: hidden; margin-bottom: 7rem;">
-        </div>
+        <div class="hide" style="visibility: hidden; margin-bottom: 10rem"></div>
       </div>
     </section>
   </ion-content>
 </body>
 
 <!-- modal -->
-<ion-modal #modal trigger="open-modal" [canDismiss]="canDismiss" [presentingElement]="presentingElement">
+<ion-modal #modal trigger="open-modal-3">
   <ng-template>
-    <ion-header>
+    <ion-header class="ion-no-border">
       <ion-toolbar>
-        <ion-title>Modal</ion-title>
+        <ion-title>Detail bayi </ion-title>
         <ion-buttons slot="end">
-          <ion-button (click)="modal.dismiss()">Close</ion-button>
+          <ion-button (click)="onClickBack()" [strong]="true">Kembali</ion-button>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
-    <ion-content>
-      <p class="ion-padding-horizontal">You must accept the terms and conditions to close this modal.</p>
-      <ion-item>
-        <ion-label class="ion-text-wrap" for="terms">Do you accept the terms and conditions?</ion-label>
-        <ion-checkbox id="terms" (ionChange)="onTermsChanged($event)" [checked]="canDismiss"></ion-checkbox>
-      </ion-item>
+    <ion-content [fullscreen]="true">
+      <ion-card>
+        <img alt="image" src="../../assets/images/detail-bayi-3.jpeg" style="height: 230px; width: 100%" />
+        <ion-card-header>
+          <ion-card-title>Sosialiasi dan Kemandirian</ion-card-title>
+          <ion-card-subtitle>0 - 3 bulan</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Bayi mampu melihat wajah orang dan bayi mampu merespon tersenyum.
+        </ion-card-content>
+        <ion-card-header>
+          <ion-card-title>Bicara dan Bahasa</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Bayi mampu mengeluarkan ocehan serta bayi tertawa saat digelitiki
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal #modal trigger="open-modal-6">
+  <ng-template>
+    <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <ion-title>Detail bayi </ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="onClickBack()" [strong]="true">Kembali</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content [fullscreen]="true">
+      <ion-card>
+        <img alt="image" src="../../assets/images/details-6.jpeg" style="height: 230px; width: 100%" />
+        <ion-card-header>
+          <ion-card-title>Sosialiasi dan Kemandirian</ion-card-title>
+          <ion-card-subtitle>4 - 6 bulan</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Bayi tersenyum ketika melihat mainan yang lucu, gambar atau Binatang
+          peliharaan saat bayi bermain sendiri
+        </ion-card-content>
+        <ion-card-header>
+          <ion-card-title>Bicara dan Bahasa</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Bayi mampu mengeluarkan suara gembira bernada tinggi atau memekik
+          tetapi bukan menangis
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal #modal trigger="open-modal-9">
+  <ng-template>
+    <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <ion-title>Detail bayi </ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="onClickBack()" [strong]="true">Kembali</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content [fullscreen]="true">
+      <ion-card>
+        <img alt="image" src="../../assets/images/6.jpeg" style="height: 230px; width: 100%" />
+        <ion-card-header>
+          <ion-card-title>Sosialiasi dan Kemandirian</ion-card-title>
+          <ion-card-subtitle>6 - 9 bulan</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Bayi mampu mencari mainan atau benda yang dijatuhkan, bermain tepuk
+          tangan atau ciluk ba, serta mampu memakan makanan sendiri.
+        </ion-card-content>
+        <ion-card-header>
+          <ion-card-title>Bicara dan Bahasa</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Bayi mampu bersuara tanpa arti, seperti mamama, bababa, dadada,
+          tatata, papapa
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal #modal trigger="open-modal-12">
+  <ng-template>
+    <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <ion-title>Detail bayi </ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="onClickBack()" [strong]="true">Kembali</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content [fullscreen]="true">
+      <ion-card>
+        <img alt="image" src="../../assets/images/detail-bayi-12.jpeg" style="height: 230px; width: 100%" />
+        <ion-card-header>
+          <ion-card-title>Sosialiasi dan Kemandirian</ion-card-title>
+          <ion-card-subtitle>9 - 12 bulan</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Tangan bayi berusaha meraih benda yang dilihat, sementara bayi mungkin
+          merasa ketakutan terhadap orang yang belum dikenal.
+        </ion-card-content>
+        <ion-card-header>
+          <ion-card-title>Bicara dan Bahasa</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Bayi mampu menirukan suara yang didengar, menyebut kata-kata kecil,
+          dan mengeskpresikan sesuatu ketika mendengar suara yang didengarnya.
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal #modal trigger="open-modal-18">
+  <ng-template>
+    <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <ion-title>Detail bayi </ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="onClickBack()" [strong]="true">Kembali</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content [fullscreen]="true">
+      <ion-card>
+        <img alt="image" src="../../assets/images/detail-bayi-18.jpeg" style="height: 230px; width: 100%" />
+        <ion-card-header>
+          <ion-card-title>Sosialiasi dan Kemandirian</ion-card-title>
+          <ion-card-subtitle>12 - 18 bulan</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Bayi mampu menunjukkan apa yang diinginkannya tanpa menangis atau
+          merengek, mengeluarkan suara yang menyenangkan, dan menarik tangan
+          ibu.
+        </ion-card-content>
+        <ion-card-header>
+          <ion-card-title>Bicara dan Bahasa</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Bayi mampu memanggil ayah dengan kata “papa”, memanggi ibu dengan kata
+          “mama”
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal #modal trigger="open-modal-24">
+  <ng-template>
+    <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <ion-title>Detail bayi </ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="onClickBack()" [strong]="true">Kembali</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content [fullscreen]="true">
+      <ion-card>
+        <img alt="image" src="../../assets/images/detail-bayi-24.jpeg" style="height: 230px; width: 100%" />
+        <ion-card-header>
+          <ion-card-title>Sosialiasi dan Kemandirian</ion-card-title>
+          <ion-card-subtitle>18 - 24 bulan</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Bayi mampu memegang sendok atau cangkir sendiri untuk belajar makan
+          dan minum, bertepuk tangan, melambai-lambaikan tangan, menirukan
+          pekerjaan rumah tangga, dan mengetahui jenis kelaminnya sendiri.
+        </ion-card-content>
+        <ion-card-header>
+          <ion-card-title>Bicara dan Bahasa</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Bayi mampu menyebut 3-6 kata yang mempunyai arti
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal #modal trigger="open-modal-36">
+  <ng-template>
+    <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <ion-title>Detail bayi </ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="onClickBack()" [strong]="true">Kembali</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content [fullscreen]="true">
+      <ion-card>
+        <img alt="image" src="../../assets/images/30.jpeg" style="height: 230px; width: 100%" />
+        <ion-card-header>
+          <ion-card-title>Sosialiasi dan Kemandirian</ion-card-title>
+          <ion-card-subtitle>24 - 36 bulan</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Bayi mampu makan nasi sendiri tanpa banyak yang tercecer serta bayi mampu melepas pakaiannya sendiri
+        </ion-card-content>
+        <ion-card-header>
+          <ion-card-title>Bicara dan Bahasa</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Bayi mulai mampu berbicara dengan baik menggunakan dua kata, menunjuk satu atau lebih bagian tubuhnya ketika ditanya, melihat gambar dan dapat menyebut dengan benar nama dua benda atau lebih, serta membantu membereskan mainannya sendiri.
+        </ion-card-content>
+      </ion-card>
     </ion-content>
   </ng-template>
 </ion-modal>

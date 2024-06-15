@@ -86,45 +86,6 @@
   </ion-header>
 
   <ion-content [class.blurred]="isLoading">
-    <div class="wrap">
-      <ion-item fill="outline">
-        <ion-label position="floating">Outline input</ion-label>
-        <ion-input placeholder="Enter text"></ion-input>
-      </ion-item>
-      <ion-item style="margin-top: 1rem">
-        <ion-label position="floating">Floating Input</ion-label>
-        <ion-input placeholder="Enter text"></ion-input>
-      </ion-item>
-    </div>
-      <div class="main">
-        <header class="header">
-          <ul class="menu" #menu>
-            <li class="menu__item">
-              <a class="menu__link">Home</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link">About Us</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link">How it Works</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link">Benefits</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link">Testimonials</a>
-            </li>
-          </ul>
-          <ul class="menu menu-right" #menuSecond>
-            <li class="menu__item">
-              <a class="menu__link">Blog</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link">FAQ</a>
-            </li>
-          </ul>
-        </header>
-    </div>
-
+    <!-- <ion-button (click)="showLoading()">Show Loading</ion-button> -->
   </ion-content>
 </body>

@@ -1,73 +1,160 @@
-a:hover {
-    text-decoration: none !important;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+ion-content {
+    --background: #ffffff;
+    --color: #333333;
+    --padding: 20px;
 }
 
-.dedcription-btn {
+ion-toolbar {
+    --background: #0f2d79;
+    --color: #ffffff;
+}
+
+ion-title {
+    --color: #ffffff;
+}
+
+ion-item {
+    --highlight-height: 2px;
+    --highlight-color-focused: #43e7f3;
+    --highlight-color-valid: #6f58d8;
+    --highlight-color-invalid: #ff46be;
+  }
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    position: relative;
-    display: inline-block;
-    border-radius: 30px;
-    background-color: #fcfcfc;
-    color: #ffa000;
-    text-align: center;
-    font-size: 18px;
-    padding: 9px 0;
-    transition: all 0.3s;
-    padding-right: 40px;
-    margin: 20px 5px;
-    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.06);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    backdrop-filter: blur(1px);
 }
 
-.dedcription-btn .btn-icon {
-    background-color: #ffa000;
-    width: 92px;
-    height: 45px;
-    float: right;
-    position: absolute;
-    border-radius: 30px 30px 30px 0;
-    ;
-    right: 0px;
-    top: 0px;
-    transition: all 0.3s;
+.content.blurred {
+    filter: blur(5px);
 }
 
-.name-descripeion {
-    position: relative;
-    z-index: 9999;
+.pl {
+    display: block;
+    width: 4em;
+    height: 4em;
 }
 
-.btn-icon::after {
-    content: "";
-    width: 0;
-    height: 0;
-    border-top: 45px solid #fcfcfc;
-    border-right: 40px solid transparent;
-    position: absolute;
-    top: 0px;
-    left: 0px;
+.pl__ring,
+.pl__ball1,
+.pl__ball2 {
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform-origin: 32px 32px;
 }
 
-.dedcription-btn:hover .btn-icon {
-    width: 100%;
-    border-radius: 30px;
+.pl__ring {
+    animation-name: ring;
 }
 
-.dedcription-btn:hover .btn-icon::after {
-    display: none;
-    opacity: 0.1;
+.pl__ball1 {
+    animation-name: ball1;
 }
 
-.btn-icon i {
-    position: absolute;
-    right: 25px;
-    top: 15px;
-    color: #fff;
+.pl__ball2 {
+    animation-name: ball2;
 }
 
-.dedcription-btn:hover {
-    color: #fff !important;
+/* Dark theme  */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: hsl(var(--hue), 10%, 10%);
+        --fg: hsl(var(--hue), 10%, 90%);
+    }
 }
 
-.book {
-    background-color: #00b7c4 !important;
+/* Animation */
+@keyframes ring {
+    from {
+        animation-timing-function: ease-in-out;
+        stroke-dashoffset: -122.52;
+        transform: rotate(135deg);
+    }
+
+    15% {
+        animation-timing-function: ease-in;
+        stroke-dashoffset: -122.52;
+        transform: rotate(90deg);
+    }
+
+    35% {
+        animation-timing-function: ease-out;
+        stroke-dashoffset: -65.34;
+        transform: rotate(297.5deg);
+    }
+
+    55% {
+        animation-timing-function: ease-in-out;
+        stroke-dashoffset: -122.52;
+        transform: rotate(505deg);
+    }
+
+    70% {
+        animation-timing-function: ease-in-out;
+        stroke-dashoffset: -122.52;
+        transform: rotate(490deg);
+    }
+
+    85%,
+    to {
+        stroke-dashoffset: -122.52;
+        transform: rotate(497.5deg);
+    }
+}
+
+@keyframes ball1 {
+    from {
+        transform: rotate(14deg);
+    }
+
+    20% {
+        transform: rotate(-7deg);
+    }
+
+    60% {
+        transform: rotate(399deg);
+    }
+
+    75% {
+        transform: rotate(361deg);
+    }
+
+    90%,
+    to {
+        transform: rotate(374deg);
+    }
+}
+
+@keyframes ball2 {
+    from {
+        transform: rotate(-21deg);
+    }
+
+    25% {
+        transform: rotate(-47deg);
+    }
+
+    60% {
+        transform: rotate(364deg);
+    }
+
+    75% {
+        transform: rotate(326deg);
+    }
+
+    90%,
+    to {
+        transform: rotate(339deg);
+    }
 }

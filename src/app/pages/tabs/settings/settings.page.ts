@@ -1,23 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-import { CheckboxCustomEvent } from '@ionic/angular';
-
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.page.html',
   styleUrls: ['./settings.page.scss'],
 })
 export class SettingsPage implements OnInit {
-
-  canDismiss = false;
-
-  presentingElement = null;
+  isLoading: boolean = true;
+  constructor(private loadingCtrl: LoadingController) {}
 
   ngOnInit() {
-    this.presentingElement = document.querySelector('.ion-page');
+    this.initializeLoader()
+    this.showLoading()
   }
 
-  onTermsChanged(event: Event) {
-    const ev = event as CheckboxCustomEvent;
-    this.canDismiss = ev.detail.checked;
+  initializeLoader() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 2000);
+  }
+
+  async showLoading() {
+    const loading = await this.loadingCtrl.create({
+      message: 'Menu anda dalam tahap pengembangan...',
+      duration: 2000,
+    });
+
+    loading.present();
   }
 }

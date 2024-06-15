@@ -1,50 +1,91 @@
-<div class="ion-page">
+<body>
+  <div class="loader" *ngIf="isLoading">
+    <svg
+      class="pl"
+      viewBox="0 0 64 64"
+      width="64px"
+      height="64px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#000" />
+          <stop offset="100%" stop-color="#fff" />
+        </linearGradient>
+        <mask id="grad-mask">
+          <rect x="0" y="0" width="64" height="64" fill="url(#grad)" />
+        </mask>
+      </defs>
+      <circle
+        class="pl__ring"
+        cx="32"
+        cy="32"
+        r="26"
+        fill="none"
+        stroke="hsl(223,90%,55%)"
+        stroke-width="12"
+        stroke-dasharray="169.65 169.65"
+        stroke-dashoffset="-127.24"
+        stroke-linecap="round"
+        transform="rotate(135)"
+      />
+      <g fill="hsl(223,90%,55%)">
+        <circle
+          class="pl__ball1"
+          cx="32"
+          cy="45"
+          r="6"
+          transform="rotate(14)"
+        />
+        <circle
+          class="pl__ball2"
+          cx="32"
+          cy="48"
+          r="3"
+          transform="rotate(-21)"
+        />
+      </g>
+      <g mask="url(#grad-mask)">
+        <circle
+          class="pl__ring"
+          cx="32"
+          cy="32"
+          r="26"
+          fill="none"
+          stroke="hsl(283,90%,55%)"
+          stroke-width="12"
+          stroke-dasharray="169.65 169.65"
+          stroke-dashoffset="-127.24"
+          stroke-linecap="round"
+          transform="rotate(135)"
+        />
+        <g fill="hsl(283,90%,55%)">
+          <circle
+            class="pl__ball1"
+            cx="32"
+            cy="45"
+            r="6"
+            transform="rotate(14)"
+          />
+          <circle
+            class="pl__ball2"
+            cx="32"
+            cy="48"
+            r="3"
+            transform="rotate(-21)"
+          />
+        </g>
+      </g>
+    </svg>
+  </div> 
+
   <ion-header>
     <ion-toolbar>
-      <ion-title>App</ion-title>
+      <ion-title>form</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">
-    <ion-button id="open-modal" expand="block">Open</ion-button>
-    <ion-modal
-      #modal
-      trigger="open-modal"
-      [canDismiss]="canDismiss"
-      [presentingElement]="presentingElement"
-    >
-      <ng-template>
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Modal</ion-title>
-            <ion-buttons slot="end">
-              <ion-button (click)="modal.dismiss()">Close</ion-button>
-            </ion-buttons>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
-          <p class="ion-padding-horizontal">
-            You must accept the terms and conditions to close this modal.
-          </p>
-          <ion-item>
-            <ion-label class="ion-text-wrap" for="terms"
-              >Do you accept the terms and conditions?</ion-label
-            >
-            <ion-checkbox
-              id="terms"
-              (ionChange)="onTermsChanged($event)"
-              [checked]="canDismiss"
-            ></ion-checkbox>
-          </ion-item>
-        </ion-content>
-      </ng-template>
-    </ion-modal>
-    <div class="col-sm-12 col-md-6">
-      <a class="dedcription-btn" href="#">
-        <span class="name-descripeion">Details</span>
-        <div class="btn-icon book">
-          <i class="fas fa-book-reader"></i>
-        </div>
-      </a>
-    </div>
+
+  <ion-content [class.blurred]="isLoading">
+    <!-- <ion-button (click)="showLoading()">Show Loading</ion-button> -->
   </ion-content>
-</div>
+</body>

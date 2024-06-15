@@ -1,16 +1,6 @@
 
-import {
-  Component,
-  ElementRef,
-  OnInit,
-  ViewChild,
-  Inject,
-} from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import { Component, OnInit } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-form',
@@ -19,15 +9,11 @@ gsap.registerPlugin(ScrollTrigger);
 })
 export class FormPage implements OnInit {
   isLoading: boolean = true;
-  @ViewChild('menu', { static: true }) menu: ElementRef<HTMLDivElement>;
-  @ViewChild('menuSecond', { static: true }) menuSecond: ElementRef<
-    HTMLDivElement
-  >;
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  constructor(private loadingCtrl: LoadingController) {}
 
   ngOnInit() {
     this.initializeLoader()
-    this.initialAnimations();
+    this.showLoading()
   }
 
   initializeLoader() {
@@ -36,21 +22,13 @@ export class FormPage implements OnInit {
     }, 2000);
   }
 
-  initialAnimations(): void {
-    gsap.from(this.menu.nativeElement.childNodes, {
-      duration: 0.5,
-      opacity: 0,
-      y: -20,
-      stagger: 0.2,
-      delay: 0.5,
-    });
-    gsap.from(this.menuSecond.nativeElement.childNodes, {
-      duration: 0.5,
-      opacity: 0,
-      y: -20,
-      stagger: 0.2,
-      delay: 0.8,
+  async showLoading() {
+    const loading = await this.loadingCtrl.create({
+      message: 'Menu anda dalam tahap pengembangan...',
+      duration: 2000,
     });
 
+    loading.present();
   }
+
 }

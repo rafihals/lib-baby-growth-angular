@@ -17,14 +17,11 @@ export class TabsPage implements OnInit, AfterViewInit {
   ngOnInit(): void { }
 
   ngAfterViewInit(): void {
-    // Listen for router events to update the active link
     this.routerSvc.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.updateActiveLink(event.urlAfterRedirects);
       }
     });
-
-    // Set the initial active link based on the current URL
     this.updateActiveLink(this.routerSvc.url);
   }
 

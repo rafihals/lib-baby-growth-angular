@@ -1,5 +1,5 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { CheckboxCustomEvent } from '@ionic/angular';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { IonModal, ModalController } from '@ionic/angular';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -12,21 +12,25 @@ gsap.registerPlugin(ScrollTrigger);
 })
 
 export class BabyPage implements OnInit, AfterViewInit {
+  @ViewChild(IonModal) modal: IonModal;
 
   isLoading: boolean = true;
-  canDismiss = false;
+  canDismiss = true;
   presentingElement = null;
 
-  constructor() { }
+  constructor(private modalController: ModalController) { }
 
   ngOnInit() {
     this.initializeLoader()
     this.presentingElement = document.querySelector('.ion-page');
   }
 
-  onTermsChanged(event: Event) {
-    const ev = event as CheckboxCustomEvent;
-    this.canDismiss = ev.detail.checked;
+  onTermsChanged() {
+    this.modal.dismiss(null, 'cancel');
+  }
+
+  onClickBack() {
+    this.modalController.dismiss();
   }
 
   ngAfterViewInit(): void {
@@ -36,7 +40,7 @@ export class BabyPage implements OnInit, AfterViewInit {
   initializeLoader() {
     setTimeout(() => {
       this.isLoading = false;
-    }, 2000);
+    }, 1000);
   }
 
   initScrollAnimations(): void {
