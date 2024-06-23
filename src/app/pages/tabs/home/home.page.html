@@ -1,180 +1,202 @@
-<body>
-  <div class="loader" *ngIf="isLoading">
-    <svg
-      class="pl"
-      viewBox="0 0 64 64"
-      width="64px"
-      height="64px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <defs>
-        <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#000" />
-          <stop offset="100%" stop-color="#fff" />
-        </linearGradient>
-        <mask id="grad-mask">
-          <rect x="0" y="0" width="64" height="64" fill="url(#grad)" />
-        </mask>
-      </defs>
-      <circle
-        class="pl__ring"
-        cx="32"
-        cy="32"
-        r="26"
-        fill="none"
-        stroke="hsl(223,90%,55%)"
-        stroke-width="12"
-        stroke-dasharray="169.65 169.65"
-        stroke-dashoffset="-127.24"
-        stroke-linecap="round"
-        transform="rotate(135)"
-      />
-      <g fill="hsl(223,90%,55%)">
-        <circle
-          class="pl__ball1"
-          cx="32"
-          cy="45"
-          r="6"
-          transform="rotate(14)"
-        />
-        <circle
-          class="pl__ball2"
-          cx="32"
-          cy="48"
-          r="3"
-          transform="rotate(-21)"
-        />
-      </g>
-      <g mask="url(#grad-mask)">
-        <circle
-          class="pl__ring"
-          cx="32"
-          cy="32"
-          r="26"
-          fill="none"
-          stroke="hsl(283,90%,55%)"
-          stroke-width="12"
-          stroke-dasharray="169.65 169.65"
-          stroke-dashoffset="-127.24"
-          stroke-linecap="round"
-          transform="rotate(135)"
-        />
-        <g fill="hsl(283,90%,55%)">
-          <circle
-            class="pl__ball1"
-            cx="32"
-            cy="45"
-            r="6"
-            transform="rotate(14)"
-          />
-          <circle
-            class="pl__ball2"
-            cx="32"
-            cy="48"
-            r="3"
-            transform="rotate(-21)"
-          />
-        </g>
-      </g>
-    </svg>
-  </div>
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Home</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <!-- content -->
-  <ion-content [class.blurred]="isLoading" fullscreen>
-    <div class="container">
-      <section>
-        <h1>Welcome to Infant Growth Guide</h1>
-        <p>Track and Support Your Child's Development from Birth to 36 Months</p>
-      </section>
-      <section>
-        <h2>Key Areas of Development</h2>
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Motor Skills</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <ul>
-              <li><strong>0-3 Months:</strong> Moves head, responds to smiling faces</li>
-              <li><strong>4-6 Months:</strong> Grasps objects, smiles at amusing stimuli</li>
-              <li><strong>6-9 Months:</strong> Picks up objects with both hands, may begin to crawl</li>
-              <li><strong>9-12 Months:</strong> Stands with support</li>
-              <li><strong>18-24 Months:</strong> Stacks blocks, starts showing independence</li>
-              <li><strong>24-36 Months:</strong> Scribbles with a pencil, climbs stairs</li>
-            </ul>
-          </ion-card-content>
-        </ion-card>
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Socialization & Independence</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <ul>
-              <li><strong>0-3 Months:</strong> Responds to smiling faces</li>
-              <li><strong>4-6 Months:</strong> Smiles at amusing stimuli</li>
-              <li><strong>18-24 Months:</strong> Calls out "mama" or "papa", shows signs of independence</li>
-              <li><strong>24-36 Months:</strong> Helps tidy up toys</li>
-            </ul>
-          </ion-card-content>
-        </ion-card>
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Speech & Language Abilities</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <ul>
-              <li><strong>0-3 Months:</strong> Responds to sounds</li>
-              <li><strong>9-12 Months:</strong> Makes sounds without meaning</li>
-              <li><strong>18-24 Months:</strong> Starts forming simple words like "mama"</li>
-              <li><strong>24-36 Months:</strong> Points to body parts, engages in more complex language tasks</li>
-            </ul>
-          </ion-card-content>
-        </ion-card>
-      </section>
-      <section>
-        <h2>Why Track Developmental Milestones?</h2>
-        <ul>
-          <li><strong>Monitor Growth:</strong> Ensure your child is progressing as expected.</li>
-          <li><strong>Early Interventions:</strong> Identify and address developmental delays early.</li>
-          <li><strong>Support & Guidance:</strong> Provide the right activities to nurture your child's growth.</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Resources for Parents & Caregivers</h2>
-        <ul>
-          <li>Developmental Milestone Checklists</li>
-          <li>Activities to Support Growth</li>
-          <li>Expert Tips and Advice</li>
-          <li>Community Support Groups</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Stay Connected</h2>
-        <p><strong>Subscribe to Our Newsletter</strong></p>
-        <p>Get the latest updates on child development. Access exclusive resources and expert tips.</p>
-        <form>
-          <ion-item>
-            <ion-label position="floating">Enter your email</ion-label>
-            <ion-input type="email" required></ion-input>
-          </ion-item>
-          <ion-button expand="block" type="submit">Subscribe</ion-button>
-        </form>
-        <p><strong>Follow Us on Social Media</strong></p>
-      </section>
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar class="center-tool">
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <header>
+    <div class="section__container header__container">
+      <div class="header__image">
+        <img src="../../assets/homepage/header-1.jpg" alt="header" />
+        <img src="../../assets/homepage/header-2.jpg" alt="header" />
+      </div>
+      <div class="header__content">
+        <div>
+          <p class="sub__header">Selamat datang di panduan</p>
+          <h1> <strong style="color: #1d54de;"> Tumbuh </strong>Kembang <br>Bayi <strong style="color: #ffd504;">0-36 Bulan</strong> </h1>
+          <p class="section__subtitle">
+            Website ini menguraikan tonggak perkembangan bayi dari usia 0 hingga 36 bulan dalam empat bidang utama yakni keterampilan motorik halus, keterampilan motorik kasar, sosialisasi dan kemandirian, serta kemampuan bicara dan bahasa.
+          </p>
+          <div class="action__btns">
+            <button class="btn">Plan a Trip</button>
+            <div class="story">
+              <div class="video__image">
+                <img src="../../assets/homepage/story.jpg" alt="story" />
+                <span><i class="ri-play-fill"></i></span>
+              </div>
+              <span>Lihat cerita kami</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </header>
 
-    <ion-footer>
-      <ion-toolbar>
+  <section class="section__container destination__container">
+    <div class="section__header">
+      <div>
+        <h2 class="section__title">Jenis <strong style="color: #1d54de;">kembang</strong> bayi</h2>
+        <p class="section__subtitle">
+          Kami merangkup jenis kembang bayi mulai dari perkembangan fisik, kognitif, emosional, bahasa dan perkembangan sensorik .
+        </p>
+      </div>
+      <!-- <div class="destination__nav">
+            <span><i class="ri-arrow-left-s-line"></i></span>
+            <span><i class="ri-arrow-right-s-line"></i></span>
+          </div> -->
+    </div>
+    <div class="destination__grid">
+      <div class="destination__card">
+        <img src="../../assets/homepage/destination-1.jpg" class="dest" alt="destination" />
+        <div class="destination__details">
+          <p class="destination__title">Origami</p>
+          <p class="destination__subtitle">Motorik halus</p>
+        </div>
+      </div>
+      <div class="destination__card">
+        <img src="../../assets/homepage/destination-2.jpg" class="dest" alt="destination" />
+        <div class="destination__details">
+          <p class="destination__title">Jalan kaki</p>
+          <p class="destination__subtitle">Motorik kasar</p>
+        </div>
+      </div>
+      <div class="destination__card">
+        <img src="../../assets/homepage/destination-4.jpg" class="dest" alt="destination" />
+        <div class="destination__details">
+          <p class="destination__title">Bicara dan bahasa</p>
+          <p class="destination__subtitle">Tertawa</p>
+        </div>
+      </div>
+      <div class="destination__card">
+        <img src="../../assets/homepage/destination-3.jpg" class="dest" alt="destination" />
+        <div class="destination__details">
+          <p class="destination__title">Kemandirian</p>
+          <p class="destination__subtitle">Makan tanpa bantuan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trip">
+    <div class="section__container trip__container">
+      <h2 class="section__title">Best trip package</h2>
+      <p class="section__subtitle">
+        Explore your suitable and dream places around the world. Here you can
+        find your right destination.
+      </p>
+      <div class="trip__grid">
+        <div class="trip__card">
+          <img src="../../assets/homepage/trip-1.jpg" alt="trip" />
+          <div class="trip__details">
+            <p>Wasserwerk Frelberg, Germany</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.2</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $300</div>
+              <button class="book__now">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="trip__card">
+          <img src="../../assets/homepage/trip-2.jpg" alt="trip" />
+          <div class="trip__details">
+            <p>Patagonia, Argentina and Chile</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $450</div>
+              <button class="book__now">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="trip__card">
+          <img src="../../assets/homepage/trip-3.jpg" alt="trip" />
+          <div class="trip__details">
+            <p>The Dolomites, Italy</p>
+            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <div class="booking__price">
+              <div class="price"><span>From</span> $400</div>
+              <button class="book__now">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="view__all">
+        <button class="btn">View All</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallary">
+    <div class="section__container gallary__container">
+      <div class="image__gallary">
+        <div class="gallary__col">
+          <img src="../../assets/homepage/gallery-1.jpg" alt="gallary" />
+        </div>
+        <div class="gallary__col">
+          <img src="../../assets/homepage/gallery-2.jpg" alt="gallary" />
+          <img src="../../assets/homepage/gallery-3.jpg" alt="gallary" />
+        </div>
+      </div>
+      <div class="gallary__content">
+        <div>
+          <h2 class="section__title">
+            Our trip gallary that will inspire you
+          </h2>
+          <p class="section__subtitle">
+            Explore your suitable and dream places around the world. Here you
+            can find your right destination.
+          </p>
+          <button class="btn">View All</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="subscribe">
+    <div class="section__container subscribe__container">
+      <div class="subscribe__content">
+        <h2 class="section__title">Subscribe to get special prize</h2>
+        <p class="section__subtitle">
+          Explore your suitable and dream places around the world. Here you
+          can find your right destination.
+        </p>
+      </div>
+      <div class="subscribe__form">
+        <form>
+          <input type="email" placeholder="Your email here" />
+          <button class="btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <h3>Pathway<span>.</span></h3>
+        <p>
+          Explore your suitable and dream places around the world. Here you
+          can find your right destination.
+        </p>
+      </div>
+      <div class="footer__col">
+        <h4>Support</h4>
+        <p>FAQs</p>
+        <p>Terms & Conditions</p>
+        <p>Privacy Policy</p>
         <p>Contact Us</p>
-        <p>Email: support@infantgrowthguide.com | Phone: 123-456-7890 | Address: 123 Child Development Ave, Care City, ABC 12345</p>
-        <p>© 2024 Infant Growth Guide. All rights reserved.</p>
-      </ion-toolbar>
-    </ion-footer>
-  </ion-content>
-  <!-- content -->
-
-</body>
+      </div>
+      <div class="footer__col">
+        <h4>Address</h4>
+        <p>
+          <span>Address:</span> 280 Wilson Street, Cima, California, 92323,
+          United States
+        </p>
+        <p><span>Email:</span> info@pathway.com</p>
+        <p><span>Phone:</span> +91 9876543210</p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2023 Web Design Mastery. All rights reserved.
+    </div>
+  </footer>
+</ion-content>

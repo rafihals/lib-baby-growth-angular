@@ -4,16 +4,6 @@ ion-content {
     --padding: 20px;
 }
 
-ion-toolbar {
-    --background: rgb(220 220 220 / 50%) !important;
-    backdrop-filter: saturate(180%) blur(30px) !important;
-    --opacity: .8 !important;
-    --opacity-scale: inherit !important;
-}
-
-// .modal-6 {
-//     background-color: #FFFFFF !important;
-// }
 
 .strong-star {
     color: #ffd504;
@@ -56,7 +46,6 @@ ion-header {
 .center-tool ion-title {
     text-align: center;
     flex: 1;
-    color: black;
 }
 
 .loader {
@@ -377,7 +366,8 @@ img {
     padding: 1rem 1rem 1rem;
     border-radius: 0.75rem;
     transition: background-color 0.4s;
-    background: #e9e9e9;
+    background: white;
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1)
 }
 
 .projects__image {
@@ -659,7 +649,7 @@ a:hover {
     height: 100%;
     transform: scaleX(0);
     transform-origin: left;
-    background: #163c9d;
+    background: white;
     animation: rollIn var(--duration) var(--delay) forwards,
         rollOut var(--duration) var(--total) forwards;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 @Component({
@@ -11,7 +12,7 @@ export class PiePage implements OnInit {
 
   isLoading: boolean = true;
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit() {
     this.initializeLoader()
@@ -19,9 +20,10 @@ export class PiePage implements OnInit {
     this.createBarChart();
   }
 
-  initializeLoader() {
+initializeLoader() {
+
     setTimeout(() => {
-      this.isLoading = false;
+      this.isLoading = false; 
     }, 2000);
   }
 

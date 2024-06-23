@@ -120,9 +120,11 @@ ion-tabs {
     transform: translateX(calc(70px * 4));
 }
 
-.navigation ul li a .icon:hover,
+.navigation ul li a .icon:hover {
+    color: aqua;
+}
 .navigation ul li a .icon.hover-active {
-    color: #f7d217;
+    color: white;
 }
 
 @media (min-width:768px) {
