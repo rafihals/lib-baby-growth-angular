@@ -10,7 +10,6 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-import { single } from './data';
 @Component({
   selector: 'app-form',
   templateUrl: './form.page.html',
