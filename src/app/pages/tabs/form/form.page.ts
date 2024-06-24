@@ -90,6 +90,24 @@ export class FormPage implements OnInit {
     console.log('Activate', JSON.parse(JSON.stringify(data)));
   }
 
+  onNavigate(){
+    this.router.navigate(['/tabs/pie'])
+  }
+
+  isAlertOpen = false;
+  alertButtons = ['Setujui'];
+
+  setOpen() {
+    this.isAlertOpen = true;
+  }
+
+  setClose (){
+    this.isAlertOpen = false
+    console.log('me');
+    
+    this.onNavigate()
+  }
+
   onDeactivate(data: any): void {
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }

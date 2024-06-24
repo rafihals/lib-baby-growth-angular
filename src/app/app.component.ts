@@ -12,10 +12,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-  //   if (localStorage.getItem('token-login')) {
-  //     this.router.navigate(['/home'])
-  //   } else {
-  //     this.router.navigate(['/login'])
-  //   }
+    if (localStorage.getItem('token-login')) {
+      this.router.navigate(['/home'])
+    } else {
+      this.router.navigate(['/login'])
+    }
   }
 }

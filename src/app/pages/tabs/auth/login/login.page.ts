@@ -33,9 +33,7 @@ export class LoginPage implements OnInit {
   }
 
 initializeLoader() {
-    if (localStorage.getItem('token-login')) {
-      this.router.navigate(['/login'])
-    }
+   
     setTimeout(() => {
       this.isLoading = false; 
     }, 2000);

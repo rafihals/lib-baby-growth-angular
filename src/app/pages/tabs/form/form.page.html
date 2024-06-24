@@ -148,9 +148,17 @@
             </fieldset>
           </form>
           <div style="display: flex; flex-direction: row-reverse">
-            <ion-button color="tertiary" shape="round">Simpan dan lanjutkan</ion-button>
+            <ion-button color="tertiary" shape="round"  (click)="setOpen()">Simpan dan lanjutkan</ion-button>
             <button mat-button matStepperPrevious>Sebelumnya</button>
           </div>
+          <ion-alert
+            [isOpen]="isAlertOpen"
+            header="Kami telah meriset data anda"
+            subHeader="Bayi -6 bulan"
+            message="Anda akan dialihkan ke halaman Riset"
+            [buttons]="alertButtons"
+            (didDismiss)="setClose()"
+          ></ion-alert>
         </mat-step>
 
         <!-- Icon overrides. -->

@@ -15,6 +15,7 @@ body {
   scroll-behavior: smooth !important;
 }
 
+
 .center-tool {
   display: flex;
   justify-content: center;
@@ -244,11 +245,17 @@ fieldset {
 
 
 legend {
-  background-color: #0056b3;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-weight: bold;
+  background-color: #0056b3 !important;
+  color: white !important;
+  padding: 5px 10px !important;
+  border-radius: 5px !important;
+  font-weight: bold !important;
+  float: none !important;
+  width: auto !important;
+  padding: none !important;
+  margin-bottom: none !important;
+  font-size: 12px !important;
+  line-height: none !important;
 }
 
 input:focus {
