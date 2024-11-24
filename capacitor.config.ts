@@ -1,10 +1,9 @@
-import { CapacitorConfig } from '@capacitor/cli';
+import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'lib-babygrowth-ionic-angular',
-  webDir: 'www',
-  bundledWebRuntime: false
+  appName: 'lib-tinybaby-angular-ionic',
+  webDir: 'www'
 };
 
 export default config;
