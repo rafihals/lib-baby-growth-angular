@@ -13,22 +13,30 @@ const routes: Routes = [
         loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
       },
       {
-        path: 'form',
-        loadChildren: () => import('./form/form.module').then(m => m.FormPageModule)
-      },
-      {
         path: 'baby',
-        loadChildren: () => import('./baby/baby.module').then(m => m.BabyPageModule)
+        loadChildren: () => import('./baby-information/baby-information.module').then(m => m.BabyInformationPageModule)
       },
       {
-        path: 'pie',
-        loadChildren: () => import('./pie/pie.module').then(m => m.PiePageModule)
+        path: 'data',
+        loadChildren: () => import('./baby-form/baby-form.module').then(m => m.BabyFormPageModule)
+      },
+      {
+        path: 'target',
+        loadChildren: () => import('./baby-target/baby-target.module').then(m => m.BabyTargetPageModule)
       },
       {
         path: 'settings',
         loadChildren: () => import('./settings/settings.module').then(m => m.SettingsPageModule)
       },
+      {
+        path: 'chart-baby',
+        loadChildren: () => import('./chart-baby/chart-baby.module').then(m => m.ChartBabyPageModule)
+      }
     ],
+  },
+  {
+    path: 'chart-baby',
+    loadChildren: () => import('./chart-baby/chart-baby.module').then( m => m.ChartBabyPageModule)
   },
 
 ];

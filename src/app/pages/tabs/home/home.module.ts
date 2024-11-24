@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
-import { SwiperModule } from 'swiper/angular';
+import { HtmlModule } from '../../../modules/html/html.module';
 
 @NgModule({
   imports: [
@@ -15,8 +15,8 @@ import { SwiperModule } from 'swiper/angular';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    SwiperModule
+    HtmlModule,
   ],
-  declarations: [HomePage]
+  declarations: [HomePage,]
 })
 export class HomePageModule {}

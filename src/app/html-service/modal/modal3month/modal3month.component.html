@@ -1,0 +1,52 @@
+<app-modalfullsheet></app-modalfullsheet>
+<ion-content style="padding: 1rem;">
+     <div *ngIf="selectedContent" class="bg-white p-6 w-full max-w-4xl">
+          <div class="relative">
+               <img alt="A picturesque view of a European alpine town with colorful buildings and a church tower."
+                    class="rounded-2xl w-full" height="400" src="{{selectedContent.image}}" width="600" />
+               <button class="absolute top-4 left-4 bg-white p-2 rounded-full shadow-md">
+                    <i class="fas fa-arrow-left">
+                    </i>
+               </button>
+               <button class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-md">
+                    <i class="fas fa-heart text-red-500">
+                    </i>
+               </button>
+          </div>
+          <div class="mt-4">
+               <div class="flex justify-between items-center">
+                    <h4 class=" font-semibold">
+                         {{selectedContent.title_motorik}}
+                    </h4>
+               </div>
+               <p class="text-gray-600 mt-2">
+                    {{selectedContent.motorik_kasar}}
+               </p>
+          </div>
+          <div class="mt-4">
+               <div class="flex justify-between items-center">
+                    <h4 class=" font-semibold">
+                         {{selectedContent.title_sosialisasi}}
+                    </h4>
+               </div>
+               <p class="text-gray-600 mt-2">
+                    {{selectedContent.sosialisai_dan_kemandirian}}
+               </p>
+          </div>
+          <div class="mt-4">
+               <div class="flex justify-between items-center">
+                    <h4 class=" font-semibold">
+                         {{selectedContent.title_bicara}}
+                    </h4>
+               </div>
+               <p class="text-gray-600 mt-2">
+                    {{selectedContent.bicara_dan_bahasa}}
+               </p>
+          </div>
+
+          <div style="text-align: center; margin-top: 2rem;">
+               <ion-button shape="round" (click)="closeModal()">Close</ion-button>
+          </div>
+     </div>
+
+</ion-content>

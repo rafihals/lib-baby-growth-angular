@@ -9,8 +9,8 @@ import { IonTabs } from '@ionic/angular';
 })
 export class TabsPage implements OnInit, AfterViewInit {
 
-  @ViewChild('tabs', { static: false }) tabs: IonTabs;
-  selectedTab: any;
+  @ViewChild('page', { static: false }) tabs!: IonTabs; // Use the definite assignment assertion (`!`) operator.
+  selectedTab: string | undefined;
 
   constructor(private routerSvc: Router) { }
 
@@ -22,62 +22,72 @@ export class TabsPage implements OnInit, AfterViewInit {
         this.updateActiveLink(event.urlAfterRedirects);
       }
     });
-    this.updateActiveLink(this.routerSvc.url);
+
+    if (this.routerSvc.url) {
+      this.updateActiveLink(this.routerSvc.url);
+    }
   }
 
   setCurrentTab() {
-    this.selectedTab = this.tabs.getSelected();
-    console.log(this.selectedTab);
+    if (this.tabs) {
+      this.selectedTab = this.tabs.getSelected();
+      console.log(this.selectedTab);
+    }
   }
 
   activateLink(index: number) {
     const listItems = document.querySelectorAll('.list');
     listItems.forEach((item, idx) => {
+      const icon = item.querySelector('.icon');
       if (idx === index) {
         item.classList.add('active');
-        item.querySelector('.icon').classList.add('hover-active');
+        if (icon) {
+          icon.classList.add('hover-active');
+        }
       } else {
         item.classList.remove('active');
-        item.querySelector('.icon').classList.remove('hover-active');
+        if (icon) {
+          icon.classList.remove('hover-active');
+        }
       }
     });
   }
 
   isActive(index: number): boolean {
     const listItems = document.querySelectorAll('.list');
-    return listItems[index].classList.contains('active');
+    return listItems[index]?.classList.contains('active') ?? false;
   }
 
   documentForm() {
-    this.routerSvc.navigate(['/tabs/form']);
+    this.routerSvc.navigate(['/page/data']);
   }
 
   onClickBaby() {
-    this.routerSvc.navigate(['/tabs/baby']);
+    this.routerSvc.navigate(['/page/baby']);
   }
 
   onClickHome() {
-    this.routerSvc.navigate(['/tabs/home']);
+    this.routerSvc.navigate(['/page/home']);
   }
 
   onClickPie() {
-    this.routerSvc.navigate(['/tabs/pie']);
+    this.routerSvc.navigate(['/page/chart-baby']);
   }
 
   onClickSettings() {
-    this.routerSvc.navigate(['/tabs/settings']);
+    this.routerSvc.navigate(['/page/settings']);
   }
 
   private updateActiveLink(url: string) {
-    if (url.includes('/tabs/form')) {
+    if (url.includes('/page/data')) {
       this.activateLink(0);
-    } else if (url.includes('/tabs/baby')) {
+    } else if (url.includes('/page/baby')) {
       this.activateLink(1);
-    } else if (url.includes('/tabs/home')) {
+    } else if (url.includes('/page/home')) {
       this.activateLink(2);
-    } else if (url.includes('/tabs/pie')) {
+    } else if (url.includes('/page/chart-baby')) {
       this.activateLink(3);
-    } else if (url.includes('/tabs/settings')) {
+    } else if (url.includes('/page/settings')) {
       this.activateLink(4);
     }
   }

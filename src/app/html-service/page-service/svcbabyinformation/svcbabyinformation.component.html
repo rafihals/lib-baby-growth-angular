@@ -1,0 +1,64 @@
+<div class="contain" style="padding: 20px; text-align: center; align-items: center;">
+  <h1 class="title" style="--duration: 0.8s">
+    <span style="--delay: 0.1s; font-family: 'Nunito'; font-weight: 700;">Data pertumbuhan</span>
+    <span style="--delay: 0.3s; font-family: 'Nunito'; font-weight: 700">
+      dan <strong style="color: blue;">perkembangan bayi</strong>
+      0-36 bulan.</span>
+  </h1>
+</div>
+
+<div class="wrap">
+  <div class="blog-slider">
+
+    <div class="blog-slider__wrp swiper-wrapper">
+      <div *ngFor="let slide of slides" class="blog-slider__item swiper-slide {{ slide.class }}">
+
+        <div class="blog-slider__img">
+          <img [src]="slide.imgSrc" alt="">
+        </div>
+
+        <div class="blog-slider__content">
+          <span class="blog-slider__code">{{ slide.code }}</span>
+          <div class="blog-slider__title">{{ slide.title }}</div>
+          <div class="blog-slider__text">{{ slide.text }}</div>
+
+          <a *ngIf="slide.isAction" (click)="openReadMoreModal(slide)"
+            class="blog-slider__button {{ slide.buttonClass }}">
+            READ MORE
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="blog-slider__pagination"></div>
+  </div>
+</div>
+
+<div style="text-align: center; margin-bottom: 4rem;">
+  <ion-button shape="round">More ? Q&A here</ion-button>
+</div>
+
+
+<!-- <div style="padding: 20px;">
+  <ion-accordion-group expand="inset" id="acc" class="acc">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>First Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">First Content</div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Second Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Second Content</div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Third Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Third Content</div>
+    </ion-accordion>
+  </ion-accordion-group>
+</div> -->

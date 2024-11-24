@@ -1,0 +1,72 @@
+<ion-content>
+  <div class="bg-gray-100 p-4 sm:p-8">
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <div class="flex items-center justify-between mb-4">
+        <h1 class="text-lg font-semibold">
+          Pada Usia {{ age }} Bulan , Berat Badan Bayi Anda {{ weight }} Ons, Tinggi Badan {{ height }} Cm
+        </h1>
+        <i class="fas fa-sync-alt text-xl">
+        </i>
+      </div>
+      <div class="text-lg font-semibold mb-4">
+        Kalkulasi berdasarkan diagaram
+      </div>
+      <div class="c">
+        <canvas id="babyChart" style="height: 40vh; width: 80vw;">
+        </canvas>
+      </div>
+    </div>
+
+    <div style="margin-top: 2rem;">
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-bold">
+            Detail
+          </h2>
+          <div class="bg-gray-100 p-2 rounded-lg">
+            <p class="text-gray-500">
+              Bayi umur {{ age }} bulan
+            </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="bg-red-100 p-4 rounded-lg text-center">
+            <img alt="Image of Nivaan" class="w-16 h-16 rounded-full mx-auto mb-2" height="100"
+              src="https://rvs-results-summary-component.vercel.app/assets/images/icon-reaction.svg"
+              width="100" />
+            <h3 class="text-lg font-bold">
+              Presentase Berat Badan
+            </h3>
+            <p class="text-2xl font-bold" *ngIf="weightPercentage !== null">
+              {{ weightPercentage.toFixed(2) }}%
+            </p>
+          </div>
+          <div class="bg-pink-100 p-4 rounded-lg text-center">
+            <img alt="Image of Anugrah" class="w-16 h-16 rounded-full mx-auto mb-2" height="100"
+              src="https://rvs-results-summary-component.vercel.app/assets/images/icon-memory.svg"
+              width="100" />
+              <h3 class="text-lg font-bold">
+                Presentase Kemampuan dan Bicara
+              </h3>
+              <p class="text-2xl font-bold" *ngIf="skillPercentage !== null">
+                {{ skillPercentage.toFixed(2) }}%
+              </p>
+          </div>
+          <div class="bg-blue-100 p-4 rounded-lg text-center">
+            <img alt="Image of Navya" class="w-16 h-16 rounded-full mx-auto mb-2" height="100"
+              src="https://rvs-results-summary-component.vercel.app/assets/images/icon-reaction.svg"
+              width="100" />
+              <h3 class="text-lg font-bold">
+                Presentase Tinggi Badan
+              </h3>
+              <p class="text-2xl font-bold" *ngIf="heightPercentage !== null">
+                {{ heightPercentage.toFixed(2) }}%
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <app-footer></app-footer>
+</ion-content>
